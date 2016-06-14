@@ -1,0 +1,24 @@
+{
+  "buildOptions": {
+    "emitEntryPoint": true,
+    "debugType": "portable",
+    "preserveCompilationContext": true
+  },
+  "dependencies" : {
+    "Microsoft.AspNetCore.Hosting": "1.0.0-rc2-final",
+    "Microsoft.AspNetCore.Server.IISIntegration": "1.0.0-rc2-final",
+    "Microsoft.AspNetCore.Server.Kestrel": "1.0.0-rc2-final"
+  },
+  "frameworks": {
+    "net451": { }
+  },
+  "tools": {
+    "Microsoft.AspNetCore.Server.IISIntegration.Tools": {
+      "version": "1.0.0-preview1-final",
+      "imports": "portable-net45+wp80+win8+wpa81+dnxcore50"
+    }
+  },
+  "scripts": {
+    "postpublish": "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%"
+  }
+}
